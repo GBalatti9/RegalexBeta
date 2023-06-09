@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-family: Montserrat;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+body{
+    background-color: #f8ff78;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.titulo-especial{
+    position: absolute;
+    top: 0;
+}
+
+h2{
+    font-family: Bebas Neue;
+    width: 80%;
+    text-align: center;
+}
+
+.container-home{
+    display: flex;
+    flex-direction: column;
+}
+
+.title-home{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title-home h1{
+    font-family: Bebas Neue;
+    font-size: 7rem;
+    text-align: center;
+    width: 100%;
+    height: 80%;
+}
+
+.title-home p{
+    height: 20%;
+}
+
+.forms-redirect {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+}
+
+.forms-redirect p {
+    width: 90%;
+    text-align: justify;
+    padding: 5%;
+}
+
+.forms-redirect a {
+    padding: 7px;
+    text-decoration: none;
+    color: black;
+    font-family: Montserrat;
+    position: relative; 
+    border-radius: 12px;
+    font-size: 1.2rem;
+    box-shadow: 0px 0px 2px #000000;
+    background-color: #f9ff8a;
+}
+
+.aclaracion{
+    font-size: 0.7rem;
+}
+
+/* MEDIA QUERYS */
+
+@media (min-width: 480px){
+    .forms-redirect {
+        width: 480px;
+    }
+}
+
+@media (min-width: 768px){
+
+    .forms-redirect a{
+        box-shadow: none;
+        background-color: none;
+    }
+
+    .forms-redirect a:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 12px;
+        transition: height 0.3s; 
+    }
+    
+    .forms-redirect a:hover:before {
+        height: 100%;
+    }
+}
+
+@media (min-width: 1200px){
+    
+}
