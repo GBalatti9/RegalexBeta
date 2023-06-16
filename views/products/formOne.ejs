@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <%- include('../partials/header.ejs') %>
+    <form action="/products/" method="POST" class="form-radio">
+        <input type="radio" name="formOne" value="Comer">Comer
+        <br>
+        <input type="radio" name="formOne" value="Cocinar">Cocinar
+        <br>
+        <input type="radio" name="formOne" value="Tomar">Tomar
+        <br>
+        <input type="radio" name="formOne" value="Leer">Leer
+        <br>
+        <input type="radio" name="formOne" value="Musica">Musica
+        <br>
+        <input type="radio" name="formOne" value="Deportes">Deportes
+        <br>
+        <input type="radio" name="formOne" value="Jardineria">Jardineria
+        <br>
+        <input type="radio" name="formOne" value="Arte">Arte
+        <br>
+        <!-- <input type="hidden" id="selectedValue" name="selectedValue"> -->
+        <input type="submit" value="Siguiente">
+    </form>
+</body>
+
+</html>

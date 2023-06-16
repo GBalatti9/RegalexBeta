@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+
+    <form action="/users/register" method="POST" class="register-form" name="registerForm">
+        <label for="name">Nombre</label>
+        <br>
+        <input type="text"  name="name" required>
+        <br>
+        <label for="lastName">Apellido</label>
+        <br>
+        <input type="text" name="lastName" required>
+        <br>
+        <label for="email">Mail</label>
+        <br>
+        <input type="text" name="email" required>
+        <br>
+        <label for="fechaNacimiento">Fecha de nacimiento</label>
+        <br>
+        <input type="date" name="fechaNacimiento" required>
+        <br>
+        <label for="mailEnviado">Mail de quien te envió el formulario</label>
+        <br>
+        <input type="email" name="mailEnviado">
+        <br>
+        <input type="submit" value="Registrarse">
+    </form>
+</body>
+</html>

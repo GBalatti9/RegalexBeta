@@ -29,7 +29,7 @@ body{
     top: 0;
 }
 
-h2{
+#titulo-especial{
     font-family: Bebas Neue;
     width: 80%;
     text-align: center;
@@ -65,7 +65,8 @@ h2{
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    width: 100%;
+    /* width: 80%; */
+    margin: auto;
 }
 
 .forms-redirect p {
@@ -74,20 +75,67 @@ h2{
     padding: 5%;
 }
 
-.forms-redirect a {
+.forms-redirect .links-home a {
     padding: 7px;
     text-decoration: none;
     color: black;
     font-family: Montserrat;
     position: relative; 
-    border-radius: 12px;
+    /* border-radius: 12px; */
     font-size: 1.2rem;
-    box-shadow: 0px 0px 2px #000000;
-    background-color: #f9ff8a;
+    /* box-shadow: 0px 0px 2px #000000; */
+    /* background-color: #f9ff8a; */
 }
 
 .aclaracion{
     font-size: 0.7rem;
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 1px 1px 10px black;
+    height: 70px;
+}
+.header-elements{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.header-title {
+    padding-left: 10px;
+    text-transform: uppercase;
+    font-family: Bebas Neue;
+    letter-spacing: 1px;
+}
+
+.header-info {
+    margin: auto;
+}
+
+.register-form{
+    width: 80%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.register-form label{
+    padding: 2%;
+}
+
+.register-form input{
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 2px black;
+    width: 80%;
+    padding: 2%;
+    font-family: Montserrat;
+    margin: 5px 0 10px 0;
 }
 
 /* MEDIA QUERYS */
