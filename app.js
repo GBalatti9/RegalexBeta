@@ -30,4 +30,4 @@ app.set('views', [
 ]);
 
 
-app.listen(3000, () => { console.log('Servidor escuchando en el puerto 300') })
+app.listen(3000, () => { console.log('Servidor escuchando en el puerto 3000') })

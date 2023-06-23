@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+
+    <form action="/users/login" method="POST" class="register-form" name="registerForm">
+        <label for="email">Mail</label>
+        <br>
+        <input type="text" name="email" value="<%= oldData.email %>">
+        <% if(errors.email) {%>
+        <p style="color:red;"><%= errors.email.msg %></p>
+        <%} %>
+        <br>
+        <input type="submit" value="Comenzar">
+        <p>Si no tenés cuenta, <a href="/users/register">registrate</a>
+        </p>
+    </form>
+</body>
+</html>

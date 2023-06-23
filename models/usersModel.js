@@ -18,9 +18,27 @@ const model = {
         users.push(newData);
         const usersJSON = JSON.stringify(users);
         fs.writeFileSync(path.join(__dirname, this.route), usersJSON);
+    },
+
+    findByEmail: function(email){
+        let users = this.findAll();
+        let searched = users.find(user => user.email === email);
+        if(!searched){
+            searched = null
+        }
+        return searched;
+    },
+    findByName: function(name){
+        let users = this.findAll();
+        let searched = users.find(user => user.name === name);
+        if(!searched){
+            searched = null
+        }
+        return searched;
     }
 }
 
-// console.log(model.findAll());
+// console.log(model.findByEmail('gas@gmail.com'));
+// console.log(model.findByName('Gaston'));
 
 module.exports = model;

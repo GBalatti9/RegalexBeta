@@ -10,25 +10,46 @@
     <form action="/users/register" method="POST" class="register-form" name="registerForm">
         <label for="name">Nombre</label>
         <br>
-        <input type="text"  name="name" required>
+        <input type="text" name="name" value="<%= oldData.name %>">
+        <% if(errors.name) {%>
+        <p style="color:red;"><%= errors.name.msg %></p>
+        <%} %>
         <br>
         <label for="lastName">Apellido</label>
         <br>
-        <input type="text" name="lastName" required>
+        <input type="text" name="lastName" value="<%= oldData.lastName %>">
+        <% if(errors.lastName) {%>
+        <p style="color:red;"><%= errors.lastName.msg %></p>
+        <%} %>
         <br>
         <label for="email">Mail</label>
         <br>
-        <input type="text" name="email" required>
+        <input type="text" name="email" value="<%= oldData.email %>">
+        <% if(errors.email) {%>
+        <p style="color:red;"><%= errors.email.msg %></p>
+        <%} %>
+        <% if(register.msg) {%>
+        <p style="color:red;"><%= register.msg %></p>
+        <%} %>
         <br>
         <label for="fechaNacimiento">Fecha de nacimiento</label>
         <br>
-        <input type="date" name="fechaNacimiento" required>
+        <input type="date" name="fechaNacimiento" value="<%= oldData.fechaNacimiento %>">
+        <% if(errors.fechaNacimiento) {%>
+        <p style="color:red;"><%= errors.fechaNacimiento.msg %></p>
+        <%} %>
         <br>
         <label for="mailEnviado">Mail de quien te envió el formulario</label>
         <br>
-        <input type="email" name="mailEnviado">
+        <input type="email" name="mailEnviado" value="<%= oldData.mailEnviado %>">
+        <% if(errors.mailEnviado) {%>
+        <p style="color:red;"><%= errors.mailEnviado.msg %></p>
+        <%} %>
         <br>
         <input type="submit" value="Registrarse">
+        <p>¿Ya te registraste antes? 
+            <a href="/users/login">Click aquí</a>
+        </p>
     </form>
 </body>
 </html>

@@ -120,7 +120,7 @@ body{
 .register-form{
     width: 80%;
     text-align: center;
-    overflow: hidden;
+    margin-top: 10%;
 }
 
 .register-form label{
