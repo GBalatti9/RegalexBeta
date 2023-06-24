@@ -3,6 +3,8 @@
         <h2 class="header-title">Regalex</h2>
         <% if (typeof name !== 'undefined') { %>
             <p class="header-info">Hola <%= name %></p>
+        <% } else if (bienvenida.msg) { %>
+            <p class="header-info"><%= bienvenida.msg %></p>
         <% } %>
     </nav>
 </header>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <%- include('../partials/header.ejs') %>
+    <%- include('../partials/formFirstStepEat.ejs') %>
+    <%- include('../partials/formSecondStepEatA.ejs') %>
+    <% if(!data.firstStepEat) {%>
+    <%} else if(data.firstStepEat) {%>
+    <% } %>
+</body>
+
+</html>

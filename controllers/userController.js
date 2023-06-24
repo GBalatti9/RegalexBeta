@@ -9,6 +9,7 @@ const controller = {
             errors: {},
             oldData: {},
             register: {},
+            bienvenida: {},
         });
     },
 
@@ -20,6 +21,7 @@ const controller = {
             return res.render('register', {
                 errors: validations.mapped(),
                 oldData: req.body,
+                bienvenida: {},
                 register: {
                     msg: 'Ya tienes cuenta'
                 }
@@ -30,7 +32,8 @@ const controller = {
             return res.render('register', {
                 errors: validations.mapped(),
                 oldData: req.body,
-                register: {}
+                register: {},
+                bienvenida: {},
             })
         }
 
@@ -48,14 +51,22 @@ const controller = {
     getLogin: (req, res) => {
         res.render('login', {
         errors: {},
-        oldData: {}
+        oldData: {},
+        bienvenida: {},
         });
     },
 
     postLogin: (req, res) => {
 
-        if(usersModel.findByEmail(req.body.email)){
-            res.redirect('/products')
+        let user = usersModel.findByEmail(req.body.email);
+
+        if(user){
+            req.session.name = user.name;
+            res.render('formOne', {
+                bienvenida: {
+                    msg: `Te extrañábamos ${user.name}`
+                }
+            })
         } else{
             res.redirect('/users/login?Error=No tenes cuenta');
         }
