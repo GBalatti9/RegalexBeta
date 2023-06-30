@@ -16,4 +16,7 @@ router.get('/forms', productController.getCompleteForms);
 // @POST /products/formulario
 router.post('/forms', productController.postCompleteForms);
 
+// @GET /products/formulario
+router.get('/formulario', productController.getFormulario);
+
 module.exports =  router;

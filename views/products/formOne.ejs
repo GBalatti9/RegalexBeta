@@ -9,6 +9,33 @@
 <body>
     <%- include('../partials/header.ejs') %>
     <form action="/products/" method="POST" class="form-radio">
+        <% if(formularioCompleto.length > 0) {%>
+        <% const primerFormulario = formularioCompleto[0] %>
+        <h2><%= primerFormulario.pregunta %></h2>
+        <% if(primerFormulario.respuestas) {%>
+            <% const respuestas = primerFormulario.respuestas %>
+            <% respuestas.forEach(opciones => { %>
+                <label for="respuesta<%= opciones.opcion %>">
+                    <input type="radio" name="respuesta" id="respuesta<%= opciones.opcion %>" value="<%= `${opciones.texto}` %>">
+                    <p style="display: inline;"><%= opciones.texto %></p>
+                </label>
+            <% }) %>
+        <% } %>
+        <% } else {%>
+            <% if(preguntaRespuestas.pregunta) {%>
+                <h2><%= preguntaRespuestas.pregunta %></h2>
+                <% preguntaRespuestas.respuestas.forEach(opciones => { %>
+                    <label for="respuesta<%= opciones.opcion %>">
+                        <input type="radio" name="respuesta" id="respuesta<%= opciones.opcion %>" value="<%= `${opciones.texto}` %>">
+                        <p style="display: inline;"><%= opciones.texto %></p>
+                    </label>
+                <% }) %>
+                <% } %>
+        <% } %>
+        <br>
+        <input type="submit" value="Siguiente">
+
+        <!--
         <input type="radio" name="formOne" value="Comer">Comer
         <br>
         <input type="radio" name="formOne" value="Cocinar">Cocinar
@@ -25,8 +52,8 @@
         <br>
         <input type="radio" name="formOne" value="Arte">Arte
         <br>
-        <!-- <input type="hidden" id="selectedValue" name="selectedValue"> -->
-        <input type="submit" value="Siguiente">
+        <input type="hidden" id="selectedValue" name="selectedValue"> 
+        <input type="submit" value="Siguiente"> -->
     </form>
 </body>
 
